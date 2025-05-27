@@ -1,0 +1,25 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# dotenv файли
+.env
+
+# OS файли
+.DS_Store
+Thumbs.db
+
+# Docker
+*.log
+docker-compose.override.yml
+
+# редактори
+.vscode/
+.idea/
+
+# інші кеші
+dist/
+build/
+coverage/
