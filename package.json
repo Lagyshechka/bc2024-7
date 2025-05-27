@@ -20,6 +20,7 @@
   "homepage": "https://github.com/Lagyshechka/bc2024-7#readme",
   "description": "",
   "dependencies": {
+    "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "mysql2": "^3.14.1"
   },
