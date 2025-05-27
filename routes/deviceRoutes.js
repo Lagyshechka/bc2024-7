@@ -1,12 +1,16 @@
 const express = require('express');
 const router = express.Router();
 
-const deviceController = require('../controllers/deviceController');
+const {
+  registerDevice,
+  getAllDevices,
+  takeDevice,
+  getDeviceBySerial
+} = require('../controllers/deviceController');
 
-router
-  .post('/register', deviceController.registerDevice)
-  .get('/devices', deviceController.getAllDevices)
-  .post('/take', deviceController.takeDevice)
-  .get('/devices/:serial_number', deviceController.getDeviceBySerial);
+router.post('/register', registerDevice);
+router.get('/devices', getAllDevices);
+router.post('/take', takeDevice);
+router.get('/devices/:serial_number', getDeviceBySerial);
 
 module.exports = router;
