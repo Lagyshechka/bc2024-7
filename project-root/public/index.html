@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Inventory Devices</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 20px; }
+  h2 { margin-top: 40px; }
+  input, button { padding: 5px; margin: 5px 0; }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 6px; }
+</style>
+</head>
+<body>
+  <h1>Inventory Devices</h1>
+
+  <section>
+    <h2>Список пристроїв</h2>
+    <button onclick="loadDevices()">Оновити список</button>
+    <ul id="devicesList"></ul>
+  </section>
+
+  <section>
+    <h2>Реєстрація пристрою</h2>
+    <form id="registerForm">
+      <label>Ім'я пристрою: <br><input type="text" id="device_name" required></label><br>
+      <label>Серійний номер: <br><input type="text" id="serial_number" required></label><br>
+      <button type="submit">Зареєструвати</button>
+    </form>
+    <div id="registerResult"></div>
+  </section>
+
+  <section>
+    <h2>Взяти пристрій у користування</h2>
+    <form id="takeForm">
+      <label>Ім'я користувача: <br><input type="text" id="user_name" required></label><br>
+      <label>Серійний номер пристрою: <br><input type="text" id="take_serial_number" required></label><br>
+      <button type="submit">Взяти</button>
+    </form>
+    <div id="takeResult"></div>
+  </section>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -2,6 +2,7 @@
 const mysql = require('mysql2/promise');
 const dotenv = require('dotenv');
 const deviceRoutes = require('./routes/deviceRoutes');
+const path = require('path');
 
 dotenv.config();
 
@@ -23,6 +24,12 @@ const pool = mysql.createPool(dbConfig);
 app.use((req, res, next) => {
   req.db = pool;
   next();
+});
+
+app.use(express.static(path.join(__dirname, 'project-root', 'public')));
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'project-root', 'public', 'index.html'));
 });
 
 app.use('/', deviceRoutes);
